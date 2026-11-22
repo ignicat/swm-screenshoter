@@ -1,0 +1,11 @@
+[Unit]
+Description=SWM screenshot portal backend
+PartOf=graphical-session.target xdg-desktop-portal.service
+Requisite=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.impl.portal.desktop.swm-screenshoter
+ExecStart=/usr/bin/swm-screenshoter --portal
+Restart=on-failure

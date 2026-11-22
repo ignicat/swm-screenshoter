@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.freedesktop.impl.portal.desktop.swm-screenshoter
+Exec=/usr/bin/swm-screenshoter --portal
+SystemdService=swm-screenshoter-portal.service

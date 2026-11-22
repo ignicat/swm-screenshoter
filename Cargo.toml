@@ -1,0 +1,31 @@
+[package]
+name = "swm-screenshoter"
+version = "0.1.0"
+edition = "2024"
+description = "Companion screenshot utility and portal backend for swm (simple window manager)"
+license = "GPL-3.0-only"
+readme = "README.md"
+repository = "https://github.com/ignicat/swm-screenshoter"
+homepage = "https://github.com/ignicat/swm"
+keywords = ["wayland", "screenshot", "swm", "portal", "linux"]
+categories = ["multimedia::images", "gui"]
+
+[dependencies]
+blocking = "1.6"
+cosmic-text = "0.19"
+libc = "0.2"
+png = "0.18"
+postcard = { version = "1.1", features = ["use-std"] }
+resvg = { version = "0.47", default-features = false }
+rune-cfg = "0.7.1"
+serde = { version = "1.0", features = ["derive"] }
+tiny-skia = "0.12"
+wayland-client = "0.31"
+wayland-cursor = "0.31"
+wayland-protocols = { version = "0.32", features = ["client", "staging", "unstable"] }
+wayland-protocols-wlr = { version = "0.3", features = ["client"] }
+xkbcommon = "0.9"
+zbus = "5.19"
+
+[profile.dev.package."*"]
+opt-level = 3
